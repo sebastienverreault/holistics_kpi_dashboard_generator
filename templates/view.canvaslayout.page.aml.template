@@ -1,0 +1,10 @@
+  view: CanvasLayout {
+    label: '$label'
+    height: $height
+    grid_size: $grid_size
+    $block_title_position
+$blocks_position
+    mobile {
+      mode: 'auto'
+    }
+  }

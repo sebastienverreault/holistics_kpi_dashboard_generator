@@ -1,0 +1,13 @@
+Dashboard $title_underscored {
+  title: '$title'
+  description: ''''''
+  block title: TextBlock {
+    content: @md # $description
+;;
+  }
+  $blocks
+
+  $views
+
+  theme: H.themes.classic
+}

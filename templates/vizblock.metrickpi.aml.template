@@ -1,0 +1,41 @@
+  block v$block_number: VizBlock {
+    label: '$block_label'
+    viz: MetricKpi {
+      dataset: $dataset
+      filter {
+        field: ref('$filter_model', '$filter_field')
+        operator: '$filter_operator'
+        value: '$filter_value'
+      }
+      value: VizFieldFull {
+        label: '$field_label'
+        ref: ref('$field_model', '$field_field')
+        aggregation: '$field_aggregation'
+        format {
+          type: '$field_format_type'
+          pattern: '$field_format_pattern'
+          group_separator: '$field_format_group_separator'
+          decimal_separator: '$field_format_decimal_separator'
+        }
+      }
+      settings {
+        display_mode: 'single'
+        aggregate_awareness {
+          enabled: true
+          debug_comments: true
+        }
+        alignment: 'center'
+        label {
+          font_size: 16
+          font_color: '#4a5059'
+        }
+        metric_value {
+          font_size: 48
+          font_color: '#4a5059'
+        }
+      }
+    }
+    settings {
+      hide_label: true
+    }
+  }
